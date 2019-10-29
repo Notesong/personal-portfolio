@@ -1,0 +1,23 @@
+// flexbox mixin--includes the main properties available as parameters
+.flexbox(@flow, @justify, @alignItems, @alignContent) {
+    display: flex;
+    flex-flow: @flow;
+    justify-content: @justify;
+    align-items: @alignItems;
+    align-content: @alignContent;
+}
+
+// general button mixin.  Can be used for most of the button formatting through the parameters.
+.button(@bgColor, @fontColor, @bgHoverColor, @fontHoverColor, @padding, @fontSize, @borderRadius) {
+    background-color: @bgColor;
+    color: @fontColor;
+    padding: @padding;
+    font-size: @fontSize;
+    border-radius: @borderRadius;
+    .flexbox(row, center, center, center);
+
+    &:hover {
+        background-color: @bgHoverColor;
+        color: @fontHoverColor;
+    }
+}
