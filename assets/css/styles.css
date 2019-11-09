@@ -135,7 +135,8 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  color: #554058;
+  color: #c99dd0;
+  background: #272727;
 }
 h1,
 h2,
@@ -182,4 +183,45 @@ img {
   position: relative;
   min-height: 100vh;
   padding-bottom: 10rem;
+}
+.header-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  width: 60%;
+}
+.header-nav a {
+  padding: 0 2rem;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #c99dd0;
+}
+.header-nav a:hover {
+  color: #9DBDD0;
+}
+.header-main {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.header-main .title {
+  width: 40%;
+}
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  text-align: center;
+  height: 5rem;
+  bottom: 0;
+  position: absolute;
 }
