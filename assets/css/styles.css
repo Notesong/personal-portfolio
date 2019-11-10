@@ -425,6 +425,6 @@ footer {
 }
 @media only screen and (min-width: 800px) {
   #about .about-body .bio {
-    width: 50%;
+    width: 30%;
   }
 }
