@@ -135,7 +135,7 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  color: #9da6d0;
+  color: #e9e7e7;
   background: #272727;
 }
 h1,
@@ -145,7 +145,7 @@ h4,
 h5,
 h6 {
   padding-bottom: 1rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Code', sans-serif;
 }
 h1 {
   font-size: 4rem;
@@ -234,7 +234,7 @@ img {
   color: #9da6d0;
 }
 .header-nav ul li a:hover {
-  color: #9DBDD0;
+  color: #75c4f1;
 }
 @media only screen and (min-width: 800px) {
   .header-nav ul li a {
@@ -406,25 +406,72 @@ footer {
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+#about .about-body .bio,
+#about .about-body .contact {
   padding: 3rem;
 }
 #about .about-body img {
   display: none;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   #about .about-body img {
     display: block;
-    width: 50%;
+    width: 100%;
     max-width: 400px;
     height: auto;
     padding: 3rem;
   }
 }
+#about .about-body .bio-text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+@media only screen and (min-width: 1000px) {
+  #about .about-body .bio-text {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
 #about .about-body .bio {
   width: 100%;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   #about .about-body .bio {
-    width: 30%;
+    width: 50%;
   }
+}
+#about .about-body .bio p {
+  font-size: 1.8rem;
+}
+#about .about-body .contact {
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+  #about .about-body .contact {
+    width: 50%;
+    text-align: left;
+  }
+}
+#about .about-body .contact p {
+  font-size: 3rem;
+}
+@media only screen and (min-width: 1000px) {
+  #about .about-body .contact p {
+    font-size: 2.5rem;
+  }
+}
+#about .about-body .contact a {
+  text-decoration: none;
+  color: #9da6d0;
+}
+#about .about-body .contact a:hover {
+  color: #75c4f1;
 }

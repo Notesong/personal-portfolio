@@ -57,23 +57,56 @@
 #about {
     .about-body {
         .flexbox(row nowrap, center, center, center);
-        padding: 3rem;
+
+        .bio, .contact {
+            padding: 3rem;
+        }
         img {
             display: none;
-            @media @lgTabletMQ {
+            @media @desktopMQ {
                 display: block;
-                width: 50%;
+                width: 100%;
                 max-width: 400px;
                 height: auto;
                 padding: 3rem;
             }
         }
+        .bio-text {
+            .flexbox(column nowrap, center, center, center);
+            @media @desktopMQ {
+                .flexbox(row nowrap, center, center, center);
+            }
+        }
         .bio {
             width: 100%;
-            @media @lgTabletMQ {
-                width: 30%;
+            @media @desktopMQ {
+                width: 50%;
+            }
+            p {
+                font-size: 1.8rem;
+            }
+        }
+        .contact {
+            width: 100%;
+            text-align: center;
+            @media @desktopMQ {
+                width: 50%;
+                text-align: left;
+            }
+
+            p {
+                font-size: 3rem;
+                @media @desktopMQ {
+                    font-size: 2.5rem;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: @navFontColor;
+                &:hover {
+                    color: @navHoverFontColor;
+                }
             }
         }
     }
-
 }
