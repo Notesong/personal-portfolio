@@ -135,24 +135,20 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  color: #c99dd0;
+  color: #9da6d0;
   background: #272727;
 }
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
+  padding-bottom: 1rem;
   font-family: 'Open Sans', sans-serif;
 }
 h1 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 10rem;
-}
-h2,
-h3,
-h4 {
-  padding-bottom: 1rem;
+  font-size: 4rem;
 }
 h2 {
   font-size: 3.2rem;
@@ -190,28 +186,143 @@ img {
   justify-content: flex-end;
   align-items: center;
   align-content: center;
-  width: 60%;
+  width: 20%;
 }
-.header-nav a {
-  padding: 0 2rem;
+@media only screen and (min-width: 800px) {
+  .header-nav {
+    width: 60%;
+  }
+}
+.header-nav i {
+  font-size: 3.5rem;
+  padding-right: 1rem;
+}
+@media only screen and (min-width: 800px) {
+  .header-nav i {
+    display: none;
+  }
+}
+.header-nav ul {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+@media only screen and (min-width: 800px) {
+  .header-nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  }
+}
+.header-nav ul li {
+  margin: 4rem;
+  text-align: center;
+}
+@media only screen and (min-width: 800px) {
+  .header-nav ul li {
+    margin: 0 2rem;
+  }
+}
+.header-nav ul li a {
   text-decoration: none;
-  font-size: 1.7rem;
-  color: #c99dd0;
+  font-size: 4rem;
+  color: #9da6d0;
 }
-.header-nav a:hover {
+.header-nav ul li a:hover {
   color: #9DBDD0;
 }
-.header-main {
+@media only screen and (min-width: 800px) {
+  .header-nav ul li a {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header-nav .menu {
+    display: block;
+    position: fixed;
+    top: 8rem;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(73, 84, 102, 0.808);
+    border: none;
+    z-index: 2;
+  }
+}
+.main-header {
   width: 100%;
-  padding: 2rem;
+  height: 100vh;
+}
+.main-header .header-bar {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   align-content: center;
 }
-.header-main .title {
-  width: 40%;
+.main-header .name {
+  width: 80%;
+}
+@media only screen and (min-width: 800px) {
+  .main-header .name {
+    width: 40%;
+  }
+}
+.main-header .name h1 {
+  font-size: 3rem;
+}
+@media only screen and (min-width: 800px) {
+  .main-header .name h1 {
+    font-size: 3.5rem;
+  }
+}
+.main-header .header-body {
+  padding: 0 3rem;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.main-header .header-body .shoutout {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+}
+.main-header .header-body .image {
+  width: 50%;
+  height: 100%;
+  background-image: url('../images/stones.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.main-header h2 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+@media only screen and (min-width: 800px) {
+  .main-header h2 {
+    font-size: 10rem;
+  }
+}
+.nav-colored {
+  background-color: #272727;
+}
+.nav-transparent {
+  background-color: transparent;
 }
 footer {
   display: flex;
@@ -224,4 +335,96 @@ footer {
   height: 5rem;
   bottom: 0;
   position: absolute;
+}
+#portfolio,
+#about {
+  width: 100%;
+}
+#portfolio h2,
+#about h2 {
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#portfolio .portfolio-boxes {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#portfolio .portfolio-boxes .portfolio-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 501px) {
+  #portfolio .portfolio-boxes .portfolio-box {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #portfolio .portfolio-boxes .portfolio-box {
+    width: 33%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #portfolio .portfolio-boxes .portfolio-box {
+    width: 25%;
+  }
+}
+#portfolio .portfolio-boxes .one {
+  background-image: url('../images/block1.jpg');
+}
+#portfolio .portfolio-boxes .two {
+  background-image: url('../images/tipsease.jpg');
+}
+#portfolio .portfolio-boxes .three {
+  background-image: url('../images/block2.jpg');
+}
+#portfolio .portfolio-boxes .four {
+  background-image: url('../images/block3.jpg');
+}
+#portfolio .portfolio-boxes .five {
+  background-image: url('../images/block6.jpg');
+}
+#portfolio .portfolio-boxes .six {
+  background-image: url('../images/block7.jpg');
+}
+#portfolio .portfolio-boxes .seven {
+  background-image: url('../images/block1.jpg');
+}
+#portfolio .portfolio-boxes .eight {
+  background-image: url('../images/block2.jpg');
+}
+#about .about-body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 3rem;
+}
+#about .about-body img {
+  display: none;
+}
+@media only screen and (min-width: 800px) {
+  #about .about-body img {
+    display: block;
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    padding: 3rem;
+  }
+}
+#about .about-body .bio {
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  #about .about-body .bio {
+    width: 50%;
+  }
 }

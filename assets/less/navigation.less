@@ -1,13 +1,53 @@
 .header-nav {
     .flexbox(row nowrap, flex-end, center, center);
-    width: 60%;
-    a {
-        padding: 0 2rem;
-        text-decoration: none;
-        font-size: 1.7rem;
-        color: @navFontColor;
-        &:hover {
-            color: @navHoverFontColor;
+    width: 20%;
+    @media @lgTabletMQ {
+        width: 60%;
+    }
+    i {
+        font-size: 3.5rem;
+        padding-right: 1rem;
+        @media @lgTabletMQ {
+            display: none;
+        }
+    }
+    ul {
+        width: 100%;
+        .flexbox(column nowrap, flex-end, center, center);
+        @media @lgTabletMQ {
+            .flexbox(row nowrap, flex-end, center, center);
+        }
+        li {
+            margin: 4rem;
+            text-align: center;
+            @media @lgTabletMQ {
+                margin: 0 2rem;
+            }
+            a {
+                text-decoration: none;
+                font-size: 4rem;
+                color: @navFontColor;
+                &:hover {
+                    color: @navHoverFontColor;
+                }
+                @media @lgTabletMQ {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .menu {
+        // slide out menu is only used for mobile and small tablet devices
+        @media @mobileAndSmTabletMaxMQ {
+            display: block;
+            position: fixed;
+            top: 8rem;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background-color: rgba(73, 84, 102, 0.808);
+            border: none;
+            z-index: 2; 
         }
     }
 }
