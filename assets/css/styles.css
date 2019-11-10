@@ -176,9 +176,6 @@ img {
 }
 .container {
   width: 100%;
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 10rem;
 }
 .header-nav {
   display: flex;
@@ -204,6 +201,7 @@ img {
 }
 .header-nav ul {
   width: 100%;
+  padding-left: 5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -221,7 +219,6 @@ img {
 }
 .header-nav ul li {
   margin: 4rem;
-  text-align: center;
 }
 @media only screen and (min-width: 800px) {
   .header-nav ul li {
@@ -249,9 +246,19 @@ img {
     right: -300px;
     width: 300px;
     height: 100vh;
-    background-color: rgba(73, 84, 102, 0.808);
+    background-color: rgba(73, 84, 102, 0.925);
+    border-top-left-radius: 30rem;
+    border-bottom-left-radius: 30rem;
     border: none;
     z-index: 2;
+  }
+}
+.header-nav #first-nav {
+  padding-top: 10rem;
+}
+@media only screen and (min-width: 800px) {
+  .header-nav #first-nav {
+    padding-top: 0;
   }
 }
 .main-header {
@@ -261,6 +268,7 @@ img {
 .main-header .header-bar {
   position: fixed;
   width: 100%;
+  height: 8rem;
   padding: 2rem 2rem 0 2rem;
   display: flex;
   flex-flow: row nowrap;
@@ -340,9 +348,7 @@ footer {
   align-content: center;
   width: 100%;
   text-align: center;
-  height: 5rem;
-  bottom: 0;
-  position: absolute;
+  margin: 5rem 0 3rem 0;
 }
 #portfolio,
 #about {
@@ -353,6 +359,9 @@ footer {
   font-size: 6rem;
   text-align: center;
   margin-bottom: 4rem;
+}
+#portfolio {
+  background-color: #444444;
 }
 #portfolio .portfolio-boxes {
   width: 100%;
@@ -374,21 +383,16 @@ footer {
     width: 50%;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   #portfolio .portfolio-boxes .portfolio-box {
     width: 33%;
   }
 }
-@media only screen and (min-width: 1000px) {
-  #portfolio .portfolio-boxes .portfolio-box {
-    width: 25%;
-  }
-}
 #portfolio .portfolio-boxes .one {
-  background-image: url('../images/block1.jpg');
+  background-image: url('../images/tipsease.jpg');
 }
 #portfolio .portfolio-boxes .two {
-  background-image: url('../images/tipsease.jpg');
+  background-image: url('../images/block1.jpg');
 }
 #portfolio .portfolio-boxes .three {
   background-image: url('../images/block2.jpg');
@@ -402,12 +406,6 @@ footer {
 #portfolio .portfolio-boxes .six {
   background-image: url('../images/block7.jpg');
 }
-#portfolio .portfolio-boxes .seven {
-  background-image: url('../images/block1.jpg');
-}
-#portfolio .portfolio-boxes .eight {
-  background-image: url('../images/block2.jpg');
-}
 #about .about-body {
   display: flex;
   flex-flow: row nowrap;
@@ -416,44 +414,34 @@ footer {
   align-content: center;
 }
 #about .about-body .bio,
-#about .about-body .contact {
+#about .about-body .contact,
+#about .about-body i {
   padding: 3rem;
 }
-#about .about-body img {
+#about .about-body i {
+  font-size: 25rem;
   display: none;
 }
-@media only screen and (min-width: 1000px) {
-  #about .about-body img {
+@media only screen and (min-width: 800px) {
+  #about .about-body i {
     display: block;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    padding: 3rem;
   }
 }
 #about .about-body .bio-text {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
   #about .about-body .bio-text {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    width: 50%;
   }
 }
 #about .about-body .bio {
   width: 100%;
-}
-@media only screen and (min-width: 1000px) {
-  #about .about-body .bio {
-    width: 50%;
-  }
 }
 #about .about-body .bio p {
   font-size: 1.8rem;
@@ -462,9 +450,8 @@ footer {
   width: 100%;
   text-align: center;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 800px) {
   #about .about-body .contact {
-    width: 50%;
     text-align: left;
   }
 }

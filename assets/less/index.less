@@ -8,7 +8,8 @@
 }
 
 #portfolio {
-    .portfolio-boxes {
+    background-color: @porfolio-background-color;
+    .portfolio-boxes {    
         width: 100%;
         .flexbox(row wrap, center, center, center);
         .portfolio-box {
@@ -20,18 +21,15 @@
             @media @smTabletMQ {
                 width: 50%;
             }
-            @media @lgTabletMQ{
+            @media @desktopMQ{
                 width: 33%;
-            }
-            @media @desktopMQ {
-                width: 25%;
             }
         }
         .one {
-            background-image: url('../images/block1.jpg');
+            background-image: url('../images/tipsease.jpg');
         }
         .two {
-            background-image: url('../images/tipsease.jpg');
+            background-image: url('../images/block1.jpg');
         }
         .three {
             background-image: url('../images/block2.jpg');
@@ -45,43 +43,31 @@
         .six {
             background-image: url('../images/block7.jpg');
         }
-        .seven {
-            background-image: url('../images/block1.jpg');
-        }
-        .eight {
-            background-image: url('../images/block2.jpg');
-        }
     }
 }
 
 #about {
     .about-body {
         .flexbox(row nowrap, center, center, center);
-
-        .bio, .contact {
+        .bio, .contact, i {
             padding: 3rem;
         }
-        img {
+        i {
+            font-size: 25rem;
             display: none;
-            @media @desktopMQ {
+            @media @lgTabletMQ{
                 display: block;
-                width: 100%;
-                max-width: 400px;
-                height: auto;
-                padding: 3rem;
             }
         }
         .bio-text {
+            width: 100%;
             .flexbox(column nowrap, center, center, center);
-            @media @desktopMQ {
-                .flexbox(row nowrap, center, center, center);
+            @media @lgTabletMQ {
+                width: 50%;
             }
         }
         .bio {
             width: 100%;
-            @media @desktopMQ {
-                width: 50%;
-            }
             p {
                 font-size: 1.8rem;
             }
@@ -89,8 +75,7 @@
         .contact {
             width: 100%;
             text-align: center;
-            @media @desktopMQ {
-                width: 50%;
+            @media @lgTabletMQ {
                 text-align: left;
             }
 

@@ -13,13 +13,13 @@
     }
     ul {
         width: 100%;
+        padding-left: 5rem;
         .flexbox(column nowrap, flex-end, center, center);
         @media @lgTabletMQ {
             .flexbox(row nowrap, flex-end, center, center);
         }
         li {
             margin: 4rem;
-            text-align: center;
             @media @lgTabletMQ {
                 margin: 0 2rem;
             }
@@ -45,9 +45,17 @@
             right: -300px;
             width: 300px;
             height: 100vh;
-            background-color: rgba(73, 84, 102, 0.808);
+            background-color: rgba(73, 84, 102, 0.925);
+            border-top-left-radius: 30rem;
+            border-bottom-left-radius: 30rem;
             border: none;
             z-index: 2; 
+        }
+    }
+    #first-nav {
+        padding-top: 10rem;
+        @media @lgTabletMQ {
+            padding-top: 0;
         }
     }
 }
