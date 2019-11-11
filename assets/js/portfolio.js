@@ -24,6 +24,10 @@ const projectDescriptions = [
     }
 ];
 
+function createProjectSlideoutContent () {
+    
+}
+
 // animate mouseover on portfolio images
 const projectHolder = document.querySelectorAll('.portfolio-box');
 const projects = document.querySelectorAll('.portfolio-box img');
