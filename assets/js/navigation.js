@@ -1,3 +1,4 @@
+// slide the mobile menu in and out
 const menuButton = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu');
 
@@ -11,6 +12,7 @@ menuButton.addEventListener('click', (event) => {
   event.stopPropagation();
 });
 
+// able to click anywhere to close the mobile menu
 const menuBodyToggle = document.querySelector('body');
 
 menuBodyToggle.addEventListener('click', () => {
@@ -20,6 +22,7 @@ menuBodyToggle.addEventListener('click', () => {
   }
 });
 
+// determine if window is at the top of the page and either add or take away a background color to the navbar
 const nav = document.querySelector('.header-bar');
 
 window.addEventListener('scroll', () => {
@@ -30,4 +33,19 @@ window.addEventListener('scroll', () => {
           nav.classList.add('nav-transparent');
           nav.classList.remove('nav-colored');
   }
+});
+
+// click on link in navbar and scroll to appropriate section
+const navHome = document.querySelector('.nav-home');
+const navPortfolio = document.querySelector('.nav-portfolio');
+const navAbout = document.querySelector('.nav-about');
+
+navHome.addEventListener('click', () => {
+  TweenLite.to(window, 1, {scrollTo: '#top'});
+});
+navPortfolio.addEventListener('click', () => {
+  TweenLite.to(window, 1, {scrollTo: '#portfolio'});
+});
+navAbout.addEventListener('click', () => {
+  TweenLite.to(window, 1, {scrollTo: '#about'});
 });

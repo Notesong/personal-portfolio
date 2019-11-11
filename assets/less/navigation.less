@@ -18,6 +18,16 @@
         @media @lgTabletMQ {
             .flexbox(row nowrap, flex-end, center, center);
         }
+        li, a {
+            font-size: 4rem;
+            color: @navFontColor;
+            &:hover {
+                color: @navHoverFontColor;
+            }
+            @media @lgTabletMQ {
+                font-size: 2rem;
+            }
+        }
         li {
             margin: 4rem;
             @media @lgTabletMQ {
@@ -25,14 +35,6 @@
             }
             a {
                 text-decoration: none;
-                font-size: 4rem;
-                color: @navFontColor;
-                &:hover {
-                    color: @navHoverFontColor;
-                }
-                @media @lgTabletMQ {
-                    font-size: 2rem;
-                }
             }
         }
     }
