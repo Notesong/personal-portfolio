@@ -22,7 +22,7 @@ menuBodyToggle.addEventListener('click', () => {
   }
 });
 
-// determine if window is at the top of the page and either add or take away a background color to the navbar
+// determine if window is at the top of the page and either add or take away the background color for the navbar
 const nav = document.querySelector('.header-bar');
 
 window.addEventListener('scroll', () => {

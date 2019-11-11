@@ -45,17 +45,29 @@
         }
     }
     // slide out description box for projects
-    // .portfolio-slideout {
-    //     display: block;
-    //     position: relative;
-    //     top: 8rem;
-    //     right: -300px;
-    //     width: 300px;
-    //     height: 100vh;
-    //     background-color: rgba(73, 84, 102, 0.925);
-    //     border: none;
-    //     z-index: 2; 
-    // }
+    .portfolio-slideout {
+        display: block;
+        position: fixed;
+        top: 8rem;
+        right: -400px;
+        width: 400px;
+        height: 100vh;
+        background-color: rgba(73, 84, 102, 0.925);
+        border: none;
+        z-index: 4;
+        @media @smTabletMQ{
+            right: -500px;
+            width: 500px;
+        }
+        @media @lgTabletMQ{
+            right: -700px;
+            width: 700px;
+        }
+        #x {
+            font-size: 3rem;
+            padding: 3rem;
+        }
+    }
 }
 
 #about {

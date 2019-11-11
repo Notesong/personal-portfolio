@@ -428,6 +428,33 @@ footer {
 #portfolio .portfolio-boxes .six {
   background-image: url('../images/block7.jpg');
 }
+#portfolio .portfolio-slideout {
+  display: block;
+  position: fixed;
+  top: 8rem;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: rgba(73, 84, 102, 0.925);
+  border: none;
+  z-index: 4;
+}
+@media only screen and (min-width: 501px) {
+  #portfolio .portfolio-slideout {
+    right: -500px;
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #portfolio .portfolio-slideout {
+    right: -700px;
+    width: 700px;
+  }
+}
+#portfolio .portfolio-slideout #x {
+  font-size: 3rem;
+  padding: 3rem;
+}
 #about .about-body {
   display: flex;
   flex-flow: row nowrap;
