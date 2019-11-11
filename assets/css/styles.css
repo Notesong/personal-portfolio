@@ -431,7 +431,7 @@ footer {
 @media only screen and (max-width: 800px) {
   #portfolio .portfolio-slideout {
     display: block;
-    position: fixed;
+    position: relative;
     top: 8rem;
     right: -300px;
     width: 300px;

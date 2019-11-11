@@ -1,13 +1,14 @@
+// array of my projects
 const projectDescriptions = [
     { id: 1, 
         title: 'Tipsease',
-        description: 'blah',
-        techStack: 'Built using...',
-        link: 'http://',
-        githubRepo: 'http://',
+        description: 'Tip your server in three easy and secure steps.',
+        techStack: 'Built using HTML, LESS/CSS, and Javascript.',
+        link: 'https://tipsease-buildweek.github.io/Lee-UI/',
+        githubRepo: 'https://github.com/Tipsease-Buildweek/Lee-UI',
         highlights: {
-            1: '',
-            2: ''  
+            1: 'Designed and programmed the landing-page.',
+            2: 'Used responsive LESS/CSS and JavaScript to provide functionality.'  
         }
     },
     { id: 2, 
@@ -23,8 +24,8 @@ const projectDescriptions = [
     }
 ];
 
-
 // animate mouseover on portfolio images
+const projectHolder = document.querySelectorAll('.portfolio-box');
 const projects = document.querySelectorAll('.portfolio-box img');
 
 projects.forEach(project => {
