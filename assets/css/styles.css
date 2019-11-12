@@ -429,45 +429,46 @@ footer {
 #portfolio .portfolio-boxes .six {
   background-image: url('../images/block7.jpg');
 }
-#portfolio .portfolio-slideout {
+#portfolio .portfolio-slideout-container {
   display: block;
   position: fixed;
-  top: 8rem;
+  top: 6rem;
   right: -1000px;
   width: 400px;
   height: 100vh;
   background-color: rgba(53, 53, 53, 0.973);
   border: none;
-  z-index: 4;
+  z-index: 1;
   padding: 3rem;
+  overflow: auto;
 }
 @media only screen and (min-width: 501px) {
-  #portfolio .portfolio-slideout {
+  #portfolio .portfolio-slideout-container {
     width: 500px;
   }
 }
 @media only screen and (min-width: 800px) {
-  #portfolio .portfolio-slideout {
+  #portfolio .portfolio-slideout-container {
     width: 700px;
   }
 }
-#portfolio .portfolio-slideout #x {
+#portfolio .portfolio-slideout-container #x {
   font-size: 3rem;
 }
-#portfolio .portfolio-slideout a {
+#portfolio .portfolio-slideout-container a {
   text-decoration: none;
   color: #9da6d0;
 }
-#portfolio .portfolio-slideout a:hover {
+#portfolio .portfolio-slideout-container a:hover {
   color: #75c4f1;
 }
-#portfolio .portfolio-slideout li {
+#portfolio .portfolio-slideout-container li {
   font-size: 1.5rem;
   list-style-type: disc;
   padding: 1rem;
   margin-left: 2.5rem;
 }
-#portfolio .portfolio-slideout h3 {
+#portfolio .portfolio-slideout-container h3 {
   margin: 3rem 0 2rem 0;
 }
 #about .about-body {

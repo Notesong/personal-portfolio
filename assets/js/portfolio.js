@@ -14,10 +14,11 @@ const projectDescriptions = [
         projectTechStack: 'Built using JavaScript and the Axios library',
         projectLink: 'https://notesong.github.io/Sprint-Challenge-Applied-Javascript/',
         projectGithubRepo: 'http://https://github.com/Notesong/Sprint-Challenge-Applied-Javascript',
-        projectHighlights: ['DOM manipulation with events and HTTP GET requests.', 'Accesses API to deliver content for article boxes.', 'Components used throughout code for reusability for API requests.']
+        projectHighlights: ['Coded the header, topics section, and article boxes.', 'DOM manipulation with events and HTTP GET requests.', 'Accesses API to deliver content for article boxes.', 'Components used throughout code for reusability for API requests.']
     }
 ];
 
+const portfolioSlideoutContainer = document.querySelector('.portfolio-slideout-container');
 const portfolioSlideout = document.querySelector('.portfolio-slideout');
 const projectTitle = document.querySelector('#projectTitle');
 const projectDesc = document.querySelector('#projectDesc');
@@ -55,7 +56,7 @@ portfolioBoxes.forEach((box, i) => {
     box.addEventListener('click', (event) => {
         postProjectSlideoutContent(i);
         portfolioSlideout.classList.add('panel--open');
-        TweenLite.to(".portfolio-slideout", 1, {right:'0', ease:Power2.easeInOut});
+        TweenLite.to(".portfolio-slideout-container", 1, {right:'0', ease:Power2.easeInOut});
         event.stopPropagation();
     });
 });
@@ -63,7 +64,7 @@ portfolioBoxes.forEach((box, i) => {
 // 'x' to close slideout
 const xSlideoutToggle = document.querySelector('#x');
 xSlideoutToggle.addEventListener('click', (event) => {
-    TweenLite.to(".portfolio-slideout", 1, {right:'-1000', ease:Power2.easeInOut});
+    TweenLite.to(".portfolio-slideout-container", 1, {right:'-1000', ease:Power2.easeInOut});
     portfolioSlideout.classList.remove('panel--open');
     event.stopPropagation();
 })
