@@ -1,6 +1,6 @@
 .header-nav {
     .flexbox(row nowrap, flex-end, center, center);
-    width: 20%;
+    width: 100%;
     @media @lgTabletMQ {
         width: 60%;
     }
@@ -41,7 +41,7 @@
     .menu {
         // slide out menu is only used for mobile and small tablet devices
         @media @mobileAndSmTabletMaxMQ {
-            display: block;
+            display: none;
             position: fixed;
             top: 8rem;
             right: -300px;
