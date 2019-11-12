@@ -137,7 +137,11 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #e9e7e7;
   background: #272727;
-  width: 100%;
+  width: 100vw;
+}
+main,
+.container {
+  width: 100vw;
 }
 h1,
 h2,
@@ -268,7 +272,7 @@ img {
   }
 }
 .main-header {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 .main-header .header-bar {
@@ -375,7 +379,7 @@ footer {
 }
 #portfolio,
 #about {
-  width: 100%;
+  width: 100vw;
 }
 #portfolio h2,
 #about h2 {
