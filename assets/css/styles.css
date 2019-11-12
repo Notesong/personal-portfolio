@@ -399,6 +399,7 @@ footer {
   background-size: contain;
   width: 100%;
   height: auto;
+  border: 1px solid #646464;
 }
 @media only screen and (min-width: 501px) {
   #portfolio .portfolio-boxes .portfolio-box {
@@ -407,14 +408,14 @@ footer {
 }
 @media only screen and (min-width: 1000px) {
   #portfolio .portfolio-boxes .portfolio-box {
-    width: 33%;
+    width: 33.333%;
   }
 }
 #portfolio .portfolio-boxes .one {
   background-image: url('../images/logo-transparent-white-version.png');
 }
 #portfolio .portfolio-boxes .two {
-  background-image: url('../images/block1.jpg');
+  background-image: url('../images/lambda-times-words.png');
 }
 #portfolio .portfolio-boxes .three {
   background-image: url('../images/block2.jpg');

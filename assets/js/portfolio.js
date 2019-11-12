@@ -1,4 +1,4 @@
-// array of my projects
+// array of my projects for display on the slideout
 const projectDescriptions = [
     {
         projectTitle: 'Tipsease',
@@ -9,15 +9,12 @@ const projectDescriptions = [
         projectHighlights: ['Designed and coded the landing-page.', 'Used responsive LESS/CSS and JavaScript to provide the layout and functionality.']
     },
     {
-        projectTitle: '',
-        projectDesc: '',
-        projectTechStack: 'Built using...',
-        projectLink: 'http://',
-        projectGithubRepo: 'http://',
-        projectHighlights: {
-            0: '',
-            1: ''
-        }
+        projectTitle: 'Lambda Times',
+        projectDesc: 'Displays a list of articles gathered through an API request.',
+        projectTechStack: 'Built using JavaScript and the Axios library',
+        projectLink: 'https://notesong.github.io/Sprint-Challenge-Applied-Javascript/',
+        projectGithubRepo: 'http://https://github.com/Notesong/Sprint-Challenge-Applied-Javascript',
+        projectHighlights: ['DOM manipulation with events and HTTP GET requests.', 'Accesses API to deliver content for article boxes.', 'Components used throughout code for reusability for API requests.']
     }
 ];
 
@@ -27,8 +24,9 @@ const projectDesc = document.querySelector('#projectDesc');
 const projectTechStack = document.querySelector('#projectTechStack');
 const projectLink = document.querySelector('#projectLink');
 const projectGithubRepo = document.querySelector('#projectGithubRepo');
-const projectHighlights = document.querySelector('#projectHighlights');
+let projectHighlights = document.querySelector('#projectHighlights');
 function postProjectSlideoutContent (projectDescriptionNum) {
+    // add text to each element
     projectTitle.textContent = projectDescriptions[projectDescriptionNum].projectTitle;
     projectDesc.textContent = projectDescriptions[projectDescriptionNum].projectDesc;
     projectTechStack.textContent = projectDescriptions[projectDescriptionNum].projectTechStack;
@@ -36,6 +34,14 @@ function postProjectSlideoutContent (projectDescriptionNum) {
     projectLink.textContent = projectDescriptions[projectDescriptionNum].projectLink;
     projectGithubRepo.href = projectDescriptions[projectDescriptionNum].projectGithubRepo;
     projectGithubRepo.textContent = projectDescriptions[projectDescriptionNum].projectGithubRepo;
+
+    // reset project highlights each time so that it doesn't duplicate
+    projectHighlights.remove();
+    projectHighlights = document.createElement('ul');
+    projectHighlights.id = 'projectHighlights';
+    portfolioSlideout.appendChild(projectHighlights);
+
+    // create each li and add the text based on how many project highlights there are
     for(let i = 0 ; i < projectDescriptions[projectDescriptionNum].projectHighlights.length ; i++) {
         const highlight = document.createElement('li');
         projectHighlights.appendChild(highlight);
@@ -62,7 +68,7 @@ xSlideoutToggle.addEventListener('click', (event) => {
     event.stopPropagation();
 })
 
-// animate mouseover on portfolio images
+// animate mouseover and mouseout on portfolio images
 const projectImages = document.querySelectorAll('.portfolio-box img');
 projectImages.forEach(image => {
     image.addEventListener('mouseover', () => {
