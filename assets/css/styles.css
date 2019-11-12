@@ -250,7 +250,7 @@ img {
 }
 @media only screen and (max-width: 800px) {
   .header-nav .menu {
-    display: none;
+    display: block;
     position: fixed;
     top: 8rem;
     right: -300px;
@@ -432,7 +432,7 @@ footer {
   background-image: url('../images/block7.jpg');
 }
 #portfolio .portfolio-slideout-container {
-  display: none;
+  display: block;
   position: fixed;
   top: 6rem;
   right: -1000px;
