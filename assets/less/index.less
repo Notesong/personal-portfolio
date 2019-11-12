@@ -49,23 +49,37 @@
         display: block;
         position: fixed;
         top: 8rem;
-        right: -400px;
+        right: -1000px;
         width: 400px;
         height: 100vh;
-        background-color: rgba(73, 84, 102, 0.925);
+        background-color: rgba(53, 53, 53, 0.973);
         border: none;
         z-index: 4;
+        padding: 3rem;
         @media @smTabletMQ{
-            right: -500px;
             width: 500px;
         }
         @media @lgTabletMQ{
-            right: -700px;
             width: 700px;
         }
         #x {
             font-size: 3rem;
-            padding: 3rem;
+        }
+        a {
+            text-decoration: none;
+            color: @navFontColor;
+            &:hover {
+                color: @navHoverFontColor;
+            }
+        }
+        li {
+            font-size: 1.5rem;
+            list-style-type: disc;
+            padding: 1rem;
+            margin-left: 2.5rem;
+        }
+        h3 {
+            margin: 3rem 0 2rem 0;
         }
     }
 }
