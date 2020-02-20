@@ -15,6 +15,14 @@ const projectDescriptions = [
         projectLink: 'https://notesong.github.io/Sprint-Challenge-Applied-Javascript/',
         projectGithubRepo: 'http://https://github.com/Notesong/Sprint-Challenge-Applied-Javascript',
         projectHighlights: ['Coded the header, topics section, and article boxes.', 'DOM manipulation with events and HTTP GET requests.', 'Accesses API to deliver content for article boxes.', 'Components used throughout code for reusability for API requests.']
+    },
+    {
+        projectTitle: 'Celebrity Dead or Alive',
+        projectDesc: 'Test your celebrity knowledge.',
+        projectTechStack: 'Built using React.',
+        projectLink: 'https://notesong.github.io/Sprint-Challenge-Applied-Javascript/',
+        projectGithubRepo: 'http://https://github.com/Notesong/Sprint-Challenge-Applied-Javascript',
+        projectHighlights: ['Coded navagation and quiz in React.', 'Uses axios calls for the API.', 'Designed standard website and mobile version using CSS.']
     }
 ];
 
